@@ -5,4 +5,5 @@ whms <- read_sf("https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&ver
 mapview(whms)
 
 whms_df <- st_drop_geometry(whms)
-write.csv(whms_df, "whms.csv")
+write.csv(whms_df, "whms.csv",
+          row.names = FALSE)
